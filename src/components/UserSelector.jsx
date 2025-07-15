@@ -24,7 +24,9 @@ const UserSelector = ({ users, selectedUser, setSelectedUser, handleAddUser, han
                 ))}
             </select>
             <button
-                onClick={handleClaimPoints}
+                onClick={() => { console.log('clicking')
+                    handleClaimPoints()
+                }}
                 className="w-full bg-gray-900 h-9 text-white p-2 rounded-md hover:bg-gray-950 transition"
             >
                 Claim Points

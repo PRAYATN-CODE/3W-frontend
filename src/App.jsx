@@ -4,7 +4,6 @@ import { useEffect, useState } from 'react';
 import Leaderboard from './components/Leaderboard';
 import PointHistory from './components/PointHistory';
 import UserSelector from './components/UserSelector';
-import { Button } from './components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from './components/ui/card';
 import { Skeleton } from './components/ui/skeleton';
 
@@ -137,15 +136,8 @@ const App = () => {
                 selectedUser={selectedUser}
                 setSelectedUser={setSelectedUser}
                 handleAddUser={handleAddUser}
+                handleClaimPoints={handleClaimPoints}
               />
-              <Button
-                className="w-full mt-4"
-                onClick={handleClaimPoints}
-                disabled={isClaiming || !selectedUser}
-                variant="outline"
-              >
-                {isClaiming ? "Claiming..." : "Claim Points"}
-              </Button>
             </CardContent>
           </Card>
 
